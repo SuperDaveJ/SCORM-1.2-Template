@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<title>Closed Caption</title>
+<link href="../styles/popup.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" type="text/JavaScript" src="../scripts/c2_content.js"></script>
+ 
+<script language="JavaScript"> 
+ 
+var iTerm = getQueryValue('popterm')
+var arrPopup = new Array();
+var nTerm = 1;
+for (var i=0; i<nTerm; i++) {
+	arrPopup[i] = new Array(2);
+}
+arrPopup[0][0] = "<h1 class='popupH'>Acceptable Evidence of Registration</h1>";
+arrPopup[0][1] = "<p>Acceptable evidence of aircraft registration includes:</p><ul><li>Unexpired FAA Form 8050-3 issued by AFS-750</li><li>Fly Wire document issued by AFS-750</li><li>The Aircraft Registration Records (EDRS)</li></ul><p>Any of these three items of documentary evidence can be verified as currently effective via the AFS-750 Aircraft Registration database. As of October 1, 2010, registrations are issued with an expiration date; therefore, it is very important to verify that the registration is not expired. An expired registration is not a current registration. If the registration is expired, that will need to be resolved before you can issue the certificate.</p>";
+ 
+//arrPopup[1][0] = "<h1 class='popupH'></h1>";
+//arrPopup[1][1] = "";
+ 
+</script>
+</head>
+ 
+<body>
+<div id="popBar">
+<div id="popTitle"></div></div>
+ 
+<div id="popText"></div>
+ 
+<div id="popClose">
+<a href="javascript:window.close();">Close this window</a>
+</div>
+ 
+<script language="javascript" type="text/javascript" > 
+	document.getElementById('popTitle').innerHTML = arrPopup[iTerm-1][0];
+	document.getElementById('popText').innerHTML = arrPopup[iTerm-1][1];
+</script>
+  
+</body>
+
+</html>

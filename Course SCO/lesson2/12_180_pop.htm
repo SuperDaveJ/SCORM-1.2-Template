@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<title>Closed Caption</title>
+<link href="../styles/popup.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" type="text/JavaScript" src="../scripts/c2_content.js"></script>
+ 
+<script language="JavaScript"> 
+ 
+var iTerm = getQueryValue('popterm')
+var arrPopup = new Array();
+var nTerm = 2;
+for (var i=0; i<nTerm; i++) {
+	arrPopup[i] = new Array(2);
+}
+arrPopup[0][0] = "<h1 class='popupH'>Registration Marks</h1>";
+arrPopup[0][1] = "<p>Registration markings shall be displayed either on the vertical tail surfaces or the sides of the fuselage. If displayed on the vertical tail surfaces, the marks can be vertical or horizontal. </p><p>On single-tail aircraft, the marks must be displayed on the sides. If displayed on a multiple-vertical-tail aircraft, the marks must be on the outer surfaces. If displayed on the fuselage, the marks must be horizontal on both sides between the trailing edge of the wing and the leading edge of the horizontal stabilizer.</p><p>For fixed wing and rotorcraft aircraft, if the size of the area where the marks are applied allows, the marks must be 12 inches high. If the area does not permit 12-inch marks, the marks must be as large as practical. Gliders may display 3-inch marks.</p><p>AC 45-2 is a helpful reference in determining compliance with these requirements. Any noncompliance with the rules for registration marking is a reason for denial of the certificate unless an exemption to this rule has been granted by FAA Headquarters and the applicant is authorized to use that exemption.</p>";
+ 
+arrPopup[1][0] = "<h1 class='popupH'>Registration Number Legibility</h1>";
+arrPopup[1][1] = "</p>The registration number must be legible and written in Roman style letters without ornamentation. This means Roman block type font. Not, for example, Times New Roman font. Shading or a border may be used when it makes the number more legible.</p><p>Per AC 45-2, the FAA considers a 12 inch number legible if it can be read from 500 feet in a horizontal line perpendicular to the side of the aircraft during daylight hours, without optical aid.</p><p>When painting on the registration number, make sure that the color contrasts sufficiently with the color of the fuselage to make it easy to read. Careful consideration should be given when the background is highly decorated, i.e. checkered.</p><p>The FAA registration number, typically referred to as the N-number, includes the nationality (N for U.S.) and the actual registration which includes the numbers and any suffix letters.  <p>";
+ 
+</script>
+</head>
+ 
+<body>
+<div id="popBar">
+<div id="popTitle"></div></div>
+ 
+<div id="popText"></div>
+ 
+<div id="popClose">
+<a href="javascript:window.close();">Close this window</a>
+</div>
+ 
+<script language="javascript" type="text/javascript" > 
+	document.getElementById('popTitle').innerHTML = arrPopup[iTerm-1][0];
+	document.getElementById('popText').innerHTML = arrPopup[iTerm-1][1];
+</script>
+  
+</body>
+
+</html>

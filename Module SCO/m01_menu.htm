@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Airworthiness Certification Functions for GA Maintenance Inspectors</title>
+<style type="text/css">
+<!--
+body {
+	background: #fff url(sysimages/FAA_1862_DAR_Menu_back.jpg) top left no-repeat;
+	margin: 0;
+	padding: 0;
+	color: #000;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+}
+img {border:0;}
+-->
+</style>
+
+<script type="text/javascript">
+function updateStatus() {
+	//hardcoded since there are only 2 lessons.
+
+
+	if (parent.getLessonStatus(1) == 2) {
+		document.getElementById("ck1").style.visibility = "visible";
+	}
+	if (parent.getLessonStatus(2) == 2) {
+		document.getElementById("ck2").style.visibility = "visible";
+	}
+
+}
+function exitConfirm(){
+	if (confirm("Do you wish to exit the lesson?")==true) parent.exitCourse();
+}
+
+function showpar(n,j) {
+	for (i=1; i<=2; i++) {	
+		var e= eval("document.getElementById('para"+i+"')");
+
+		e.style.display="none";  
+  		}
+		
+		var e= eval("document.getElementById('para"+n+"')"); 
+		if (e) {
+			if ( j==1) e.style.display="block"
+			else e.style.display="none"
+		}
+}
+</script>
+
+</head>
+
+<body onload="updateStatus();">
+
+<div id="lestitle" style="position:absolute; left:169px; top:200px; width:540px; height:74px;"><img src="module1/images/MenuTitle_Mod1.png" width="633" height="74" alt="Module 1: Airworthiness Certification Functions General Information" />
+</div>
+<div id="les1" style="position:absolute; left:169px; top:274px; width:540px; height:60px;">
+	<a href="module1/lesson1/11_010.htm" onclick="javascript:parent.nPages = 19;" style="cursor:pointer;"><img src="module1/images/Mod1_Less1_0.png" onmouseover="this.src='module1/images/Mod1_Less1_2.png'; showpar(1,1)" onmouseout="this.src='module1/images/Mod1_Less1_0.png'; showpar(1,0)" width="633" height="60" alt="Lesson 1: FAA Regulations, Publications, and Records " /></a>
+    
+  <div id="ck1" style="position:absolute; left:92px; top:20px; width:23px; height:26px; z-index:11; visibility:hidden;"><img src="sysimages/lesson_complete_icon.png" width="24" height="26" alt="lesson 1 completed" /></div>
+</div>
+
+<div id="les2" style="position:absolute; left:169px; top:334px; width:531px; height:39px;">
+    <a href="module1/lesson2/12_010.htm" onclick="javascript:parent.nPages = 20;" ><img src="module1/images/Mod1_Less2_0.png" onmouseover="this.src='module1/images/Mod1_Less2_2.png';showpar(2,1)" onmouseout="this.src='module1/images/Mod1_Less2_0.png';showpar(2,0)" width="633" height="60" alt="Lesson 2: Airworthiness Certification Overview " /></a>
+
+  <div id="ck2" style="position:absolute; left:115px; top:19px; width:23px; height:26px; z-index:11; visibility:hidden;"><img src="sysimages/lesson_complete_icon.png" width="24" height="26" alt="lesson 2 completed" /></div>
+</div>
+
+<div id="lesbottom" style="position:absolute; left:169px; top:394px; width:531px; height:39px;"><img src="sysimages/menu_bottom_piece.png" width="633" height="26" />
+</div>
+
+<div id="notepad_txt" style="position: absolute; top:449px; left:167px; height:140px; width:636px;">
+  <div id="para1" style="display:none; padding:0 10px 0 10px; border: 1px solid #305e7f; border-style:dashed;">
+    <p>In this lesson, you will learn about the regulatory materials, forms, policy, and reference materials used when performing Airworthiness Certification functions.</p>
+    
+  </div>
+  <div id="para2" style="display:none; padding:0 10px 0 10px; border: 1px solid #305e7f; border-style:dashed;">
+    <p>This  lesson will provide some clarification on the terms original and recurrent  certification. It will discuss classification of Airworthiness Certificates and  categories of Special Airworthiness Certificates. It will identify the guidance  associated with aircraft registration, identification, and registration  markings. It will identify the ways to verify an aircraft registration, and it  will provide the identification requirements for aircraft and products. </p>
+    
+  </div>
+  </div>
+
+<div id="prompt" style="position:absolute; left:207px; top:606px; width:526px; height:20px; text-align:center; font-family:Arial, Helvetica, sans-serif; font-size:15px; font-weight:bold; color:#ffe402;">Select each lesson to complete the module.
+</div>
+
+<div id="exit" style="position:absolute; left:847px; top:600px;"><a href="javascript:exitConfirm()"><img src="sysimages/mm_exit_0.png" alt="Exit" name="exit_" width="70" height="35" border="0" id="exit_" title="Exit" onmouseover="this.src='sysimages/mm_exit_2.png'" onmouseout="this.src='sysimages/mm_exit_0.png'" /></a>
+</div>
+
+</body>
+</html>

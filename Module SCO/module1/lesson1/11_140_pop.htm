@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<title>Popup Information</title>
+<link href="../../styles/popup.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" type="text/JavaScript" src="../../scripts/c2_content.js"></script>
+ 
+<script language="JavaScript"> 
+ 
+var iTerm = getQueryValue('popterm')
+var arrPopup = new Array();
+var nTerm = 2;
+for (var i=0; i<nTerm; i++) {
+	arrPopup[i] = new Array(2);
+}
+arrPopup[0][0] = "<h1 class='popupH'>FAA Order 8130.2: Airworthiness Certification of Aircraft and Related Products</h1>";
+arrPopup[0][1] = "<p>FAA Order 8130.2: Airworthiness Certification of Aircraft and Related Products is the primary document for Airworthiness Certification guidance. It describes the procedures for issuing original and recurrent Standard Airworthiness Certificates, including detailed instructions for completing the applicable forms.</p>";
+ 
+arrPopup[1][0] = "<h1 class='popupH'>FAA Order 8130.21 </h1>";
+arrPopup[1][1] = "<p>FAA Order 8130.21: Procedures for Completion & Use Authorized Release Certificate, FAA Form 8130-3, Approval Tag includes the instructions for use and completion of FAA Form 8130-3. The FAA Form 8130-3 is a multi-purpose form that is used for several Airworthiness Approval functions.</p>";
+
+//arrPopup[2][0] = "<h1 class='popupH'> </h1>";
+//arrPopup[2][1] = "<p> </p>";
+ 
+</script>
+</head>
+ 
+<body>
+<div id="popBar">
+<div id="popTitle"></div></div>
+ 
+<div id="popText"></div>
+ 
+<div id="popClose">
+<a href="javascript:window.close();">Close this window</a>
+</div>
+ 
+<script language="javascript" type="text/javascript" > 
+	document.getElementById('popTitle').innerHTML = arrPopup[iTerm-1][0];
+	document.getElementById('popText').innerHTML = arrPopup[iTerm-1][1];
+</script>
+  
+</body>
+
+</html>

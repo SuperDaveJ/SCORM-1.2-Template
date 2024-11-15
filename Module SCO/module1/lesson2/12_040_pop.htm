@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<title>Popup Information</title>
+<link href="../../styles/popup.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" type="text/JavaScript" src="../../scripts/c2_content.js"></script>
+ 
+<script language="JavaScript"> 
+ 
+var iTerm = getQueryValue('popterm')
+var arrPopup = new Array();
+var nTerm = 5;
+for (var i=0; i<nTerm; i++) {
+	arrPopup[i] = new Array(2);
+}
+arrPopup[0][0] = "<h1 class='popupH'>Issuance of Special Flight Permits</h1>";
+arrPopup[0][1] = "<p>Designees do not have the words &#8220;original&#8221; or &#8220;recurrent&#8221; in their authorized function for issuing Special Flight Permits. The implication is that designees may issue Special Flight Permits that are either original or recurrent.</p>";
+ 
+arrPopup[1][0] = "<h1 class='popupH'>Export Certification</h1>";
+arrPopup[1][1] = "<p>Note: If an Export C of A is issued for a new U.S. manufactured aircraft leaving the U.S., the certification is considered its &#8220;original&#8221; certification (even if a Standard Airworthiness Certificate was not issued). When the same aircraft later returns to the U.S. and its first Standard Airworthiness Certificate is issued, that certification is considered &#8220;recurrent.&#8221;</p>";
+
+
+arrPopup[2][0] = "<h1 class='popupH'>Changes to Operating Limitations</h1>";
+arrPopup[2][1] = "<p>Making changes to Operating Limitations constitutes Amending a Special Airworthiness Certificate which requires an application. </p>";
+
+arrPopup[3][0] = "<h1 class='popupH'>U.S. Manufactured Aircraft Returning to the U.S.</h1>";
+arrPopup[3][1] = "<p>When a U.S. manufactured aircraft returns to the U.S., it is important to remember that this is NOT an import situation. It is simply a U.S. manufactured aircraft coming home, and it must be researched to determine how it left. For example, you must determine if it has ever been issued an Airworthiness Certificate or an Export C of A. If it was issued only an Export C of A, it does not require U.S. registration and therefore it may not be found in EDRS. This research must be done to determine whether you are about to issue an original or recurrent certificate. </p>"
+
+arrPopup[4][0] = "<h1 class='popupH'>Export C of A from a Bilateral CAA</h1>";
+arrPopup[4][1] = "<p>The definition of &#8220;import&#8221; is when a foreign manufactured aircraft is manufactured to a U.S.  TC and is exported from a country with whom the U.S. has a bilateral agreement and accompanied by an Export Airworthiness Approval from a bilateral CAA. This could be the country of manufacture, or a third country with whom we have third party provisions in the bilateral agreement.</p><p>The CAA&#8217;s Export Airworthiness Approval must contain a statement from that CAA stating that the aircraft conforms to its U.S. type design and is in a condition for safe operation. This approval can be in the form of a statement on an Export C of A document, a statement on letterhead, or a statement in the aircraft logbook, so long as it is made by the CAA of the exporting country. That CAA finding&#47;statement constitutes the original certification of import aircraft in the U.S., which then makes the FAA issuance of the first Airworthiness Certificate a recurrent certification.</p>"
+
+arrPopup[5][0] = "<h1 class='popupH'>Previously Certificated Aircraft Being Presented for Certification in Another Category or Classification for the First Time </h1>";
+arrPopup[5][1] = "<p>Previously certificated aircraft being presented for certification in another category or classification for the first time might include aircraft converted from standard category to a restricted category. This is an example of a change of classification.</p>";
+
+</script>
+</head>
+ 
+<body>
+<div id="popBar">
+<div id="popTitle"></div></div>
+ 
+<div id="popText"></div>
+ 
+<div id="popClose">
+<a href="javascript:window.close();">Close this window</a>
+</div>
+ 
+<script language="javascript" type="text/javascript" > 
+	document.getElementById('popTitle').innerHTML = arrPopup[iTerm-1][0];
+	document.getElementById('popText').innerHTML = arrPopup[iTerm-1][1];
+</script>
+  
+</body>
+
+</html>

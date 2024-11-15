@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<title>Closed Caption</title>
+<link href="../styles/popup.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" type="text/JavaScript" src="../scripts/c2_content.js"></script>
+ 
+<script language="JavaScript"> 
+ 
+var iTerm = getQueryValue('popterm')
+var arrPopup = new Array();
+var nTerm = 1;
+for (var i=0; i<nTerm; i++) {
+	arrPopup[i] = new Array(2);
+}
+arrPopup[0][0] = "<h1 class='popupH'>SPEAKER</h1>";
+arrPopup[0][1] = "";
+ 
+//arrPopup[1][0] = "<h1 class='popupH'></h1>";
+//arrPopup[1][1] = "";
+ 
+</script>
+</head>
+ 
+<body>
+<div id="popBar">
+<div id="popTitle"></div></div>
+ 
+<div id="popText">
+  <p>The statement &#8220;aircraft manufactured to other than U.S. requirements imported to the U.S.&#8221; means a foreign manufactured aircraft originally exported to a country other than the U.S. and there is no   Export C of A to USA stating compliance to an FAA TC. This would be an original certification for an import aircraft and there are no certification procedures for this situation in our guidance.</p>
+  <p>For  example, suppose an airbus was built in France and sold new and exported to an  airline in Australia, so the aircraft was manufactured to Australian  requirements. Years later, the same  aircraft was sold by the Australian airline to a U.S. customer. That aircraft  would be coming to the U.S. from Australia without an export from either France  to the U.S. or Australia to the U.S. (third party).</p>
+<p>The process of importing foreign manufactured aircraft to the U.S. includes the issuance of an export approval from the CAA of either the country of manufacturer or a third country with whom the U.S. has a bilateral agreement with third party provisions for acceptance of that export approval. Therefore, all properly imported aircraft will be a recurrent certification to issue the first Airworthiness Certificate in the U.S. </p>
+</div>
+ 
+<div id="popClose">
+<a href="javascript:window.close();">Close this window</a>
+</div>
+ 
+<script language="javascript" type="text/javascript" > 
+	document.getElementById('popTitle').innerHTML = arrPopup[iTerm-1][0];
+	//document.getElementById('popText').innerHTML = arrPopup[iTerm-1][1];
+</script>
+  
+</body>
+
+</html>

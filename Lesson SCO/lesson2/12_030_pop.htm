@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<title>Popup Information</title>
+<link href="../styles/popup.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" type="text/JavaScript" src="../scripts/c2_content.js"></script>
+ 
+<script language="JavaScript"> 
+ 
+var iTerm = getQueryValue('popterm')
+var arrPopup = new Array();
+var nTerm = 4;
+for (var i=0; i<nTerm; i++) {
+	arrPopup[i] = new Array(2);
+}
+arrPopup[0][0] = "<h1 class='popupH'>Aircraft or Related Products</h1>";
+arrPopup[0][1] = "<p>Examples of aircraft or related products for which an Airworthiness Certificate or approval has never been issued are:</p><ul><li>Surplus military aircraft being converted to civil aircraft and issued its first FAA Airworthiness Certificate</li><li>Aircraft built from spare and/or surplus parts </li><li>U.S. manufactured aircraft returning from a foreign country without having been issued a U.S. Airworthiness Certificate or Export of Airworthiness Certificate (for example a new aircraft sold to a foreign purchaser where no export was required by the importing CAA). This is not considered an &#8220;import&#8221;</li><li>Provisional Airworthiness  Certificates and amendments thereto</li><li>Limited Airworthiness Certificates, (first time) &#8211; former military aircraft that are eligible to be certificated in the limited category (the first time it is original)</li><li>Experimental certificates, (first time) &#8211; aircraft to be issued experimental certificates (the first time it is original)</li><li>Aircraft manufactured to other than U.S. requirements imported to the U.S. (This means foreign manufactured aircraft originally exported to another country that does not have an Export Certification to the U.S.)</li><ul>";
+ 
+arrPopup[1][0] = "<h1 class='popupH'>Previously Certificated Aircraft</h1>";
+arrPopup[1][1] = "<p>Previously certificated aircraft being presented for certification in another category or classification for the first time might include aircraft converted from standard category to a restricted category. This is an example of a change of classification. </p>";
+
+arrPopup[2][0] = "<h1 class='popupH'>Aircraft Undergone Changes to Type Design</h1>";
+arrPopup[2][1] = "<p>An example of an aircraft which has undergone changes to Type Design and requires flight testing might include a previously certificated aircraft that becomes part of an STC project. This aircraft would be issued an experimental certificate for the purpose of showing compliance with regulations. The issuance of a Standard Airworthiness Certificate after incorporation of this alteration, which required flight testing, is an original certification.</p>";
+
+arrPopup[3][0] = "<h1 class='popupH'>Issue of Special Flight Permits</h1>";
+arrPopup[3][1] = "<p>Designees do not have the words &#8220;original&#8221; or &#8220;recurrent&#8221; in their authorized function for issuing Special Flight Permits. The implication is that designees may issue Special Flight Permits that are either original or recurrent.</p>";
+
+</script>
+</head>
+ 
+<body>
+<div id="popBar">
+<div id="popTitle"></div></div>
+ 
+<div id="popText"></div>
+ 
+<div id="popClose">
+<a href="javascript:window.close();">Close this window</a>
+</div>
+ 
+<script language="javascript" type="text/javascript" > 
+	document.getElementById('popTitle').innerHTML = arrPopup[iTerm-1][0];
+	document.getElementById('popText').innerHTML = arrPopup[iTerm-1][1];
+</script>
+  
+</body>
+
+</html>

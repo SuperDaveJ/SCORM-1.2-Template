@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<manifest identifier="FAA_OIO" version="1.0"
+	xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2"
+	xmlns:imsmd = "http://www.imsglobal.org/xsd/imsmd_v1p2" 
+	xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd
+						http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd
+						http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">
+
+<metadata>
+   <schema>ADL SCORM</schema>
+   <schemaversion>1.2</schemaversion>
+   <imsmd:lom> 
+      <imsmd:general> 
+         <imsmd:title> 
+            <imsmd:langstring lang = "en_US">Name of Course</imsmd:langstring> 
+         </imsmd:title> 
+         <imsmd:description> 
+            <imsmd:langstring Lang = "en_US">
+               Description of the course
+            </imsmd:langstring> 
+          </imsmd:description> 
+          <imsmd:keywords> 
+            <imsmd:langstring Lang = "en_US">Key word 1</imsmd:langstring>
+            <imsmd:langstring Lang = "en_US">Key word 2</imsmd:langstring>
+            <imsmd:langstring Lang = "en_US">Key word 3</imsmd:langstring>
+            <imsmd:langstring Lang = "en_US">Key word 4</imsmd:langstring>
+            <imsmd:langstring Lang = "en_US">Key word n</imsmd:langstring>
+          </imsmd:keywords> 
+      </imsmd:general> 
+   </imsmd:lom> 
+</metadata>
+
+<organizations default = "Lesson_SCO">
+  <organization identifier = "Lesson_SCO" structure="LINEAR">
+	 <title><![CDATA[Name of Lesson 1]]></title>
+		<item identifier ="lesson00" identifierref ="SCO0" isvisible = "true">
+			<title><![CDATA[Lesson 0: Course Overview]]></title>
+	   </item>
+
+	   <item identifier ="lesson01" identifierref ="SCO1" isvisible = "true">
+			<title><![CDATA[Lesson 1: Name]]></title>
+	   </item>
+	
+	   <item identifier ="lesson02" identifierref ="SCO2" isvisible = "true">
+			<title><![CDATA[Lesson 2: Name]]></title>
+	   </item>
+	
+	   <item identifier ="lesson03" identifierref ="SCO3" isvisible = "true">
+			<title><![CDATA[Lesson 3: Name]]></title>
+	   </item>
+	
+	   <item identifier ="lesson04" identifierref ="SCO4" isvisible = "true">
+			<title><![CDATA[Lesson 4: Name]]></title>
+	   </item>-->
+	
+  </organization>
+</organizations>
+ 
+<resources>
+
+	<resource identifier ="SCO0" type = "webcontent" adlcp:scormtype ="sco" href="launch_lesson0.htm">
+	  <file href = "index_l00.htm"/>
+	  <file href = "loadpage.htm"/>
+	  <file href = "bottom_empty.htm"/>
+	  <file href = "glossary.htm"/> <!--depends on if it's specific-->
+	  <file href = "lesson0/00_010.htm"/>
+
+    </resource>
+	
+	<resource identifier ="SCO1" type = "webcontent" adlcp:scormtype ="sco" href="launch_lesson1.htm">
+	  <file href = "index_l01.htm"/>
+	  <file href = "loadpage.htm"/>
+	  <file href = "bottom_empty.htm"/>
+	  <file href = "glossary.htm"/>
+	  <file href = "lesson1/11_010.htm"/>
+    </resource>
+
+   <resource identifier ="SCO2" type = "webcontent" adlcp:scormtype ="sco" href="launch_lesson2.htm">
+	  <file href = "index_l02.htm"/>
+	  <file href = "loadpage.htm"/>
+	  <file href = "bottom_empty.htm"/>
+	  <file href = "glossary.htm"/>
+	  <file href = "lesson2/12_010.htm"/>
+    </resource>
+	  
+    <resource identifier ="SCO3" type = "webcontent" adlcp:scormtype ="sco" href="launch_lesson3.htm">
+	  <file href = "index_l03.htm"/>
+	  <file href = "loadpage.htm"/>
+	  <file href = "bottom_empty.htm"/>
+	  <file href = "glossary.htm"/>
+	  <file href = "lesson3/13_010.htm"/>
+    </resource>
+
+    <resource identifier ="SCO4" type = "webcontent" adlcp:scormtype ="sco" href="launch_lesson4.htm">
+	  <file href = "index_l04.htm"/>
+	  <file href = "loadpage.htm"/>
+	  <file href = "bottom_empty.htm"/>
+	  <file href = "glossary.htm"/>
+	  <file href = "lesson4/14_010.htm"/>
+    </resource>
+
+
+</resources>
+
+</manifest>
+

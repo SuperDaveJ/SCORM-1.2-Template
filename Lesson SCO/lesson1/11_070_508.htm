@@ -1,0 +1,173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/templates/c2_base.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>GA AW Maintenance Inspector’s Airworthiness Certification Functions</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" type="text/css" href="../styles/faa.css" />
+<script language="javascript" type="text/javascript" src="../scripts/jquery-1.3.2.min.js"></script>
+<script language="javascript" type="text/javascript" src="../scripts/jqFunctions.js"></script>
+<script language="javascript" type="text/javascript" src="../scripts/c2_content.js"></script>
+<script language="javascript" type="text/javascript" src="../scripts/swfobject_modified.js"></script>
+
+<!--[if lt IE 7]>
+<script defer type="text/javascript" src="scripts/pngfix.js"></script>
+<![endif]-->
+
+<!-- InstanceBeginEditable name="Script Area" -->
+<script language="JavaScript" type="text/javascript">
+
+curPgNum = 7;			//Current page number;
+nextURL = "11_080.htm";
+prevURL = "11_060.htm";
+blnInteraction = true;
+
+function initializePage() {
+
+}
+var nRows, nCols
+nRows = 4;	//does not include the first row which is for column title
+nCols = 4;	//does not include the first column which is for text
+widthTable = 850;	//table width
+widthCol0 = 500;	//first column (text) width. All other columns will be evenly divided.
+strCorrectRow1 = "0,0,0,1";		//correct answer for row 1.
+strCorrectRow2 = "1,0,0,0";		//correct answer for row 2.		//correct answer for row 3.
+strCorrectRow3 = "0,1,0,0";		//correct answer for row 3.
+strCorrectRow4 = "0,0,1,0";		//correct answer for row 4.
+ 
+
+arrCorrectAns = new Array(nRows);
+arrUserAns = new Array(nRows);
+for (var i=0; i<nRows; i++) {
+	arrCorrectAns[i] = new Array(nCols);
+	arrUserAns[i] = new Array(nCols);
+	for (var j=0; j<nCols; j++) arrUserAns[i][j] = 0
+	arrCorrectAns[i] = eval('strCorrectRow'+ (i+1) +'.split(",")')
+}
+arrColWidth = new Array(nCols);
+for (var j=0; j<nCols; j++) {
+	arrColWidth[j] = Math.round((widthTable - widthCol0)/nCols) + "px";
+}
+//Specify row and column titles here.  You need to add or remove titles accordingly.
+arrColTitle = new Array(nCols+1);
+arrRowTitle = new Array(nRows+1);
+arrColTitle[0] = "Description";
+arrColTitle[1] = "SPAS";
+arrColTitle[2] = "EDRS";
+arrColTitle[3] = "RGL";
+arrColTitle[4] = "FSIMS";
+//arrColTitle[5] = "Out Brief"
+ 
+arrRowTitle[1] = "Inspectors will use this site to look up Flight Standards guidance.  ";
+arrRowTitle[2] = "This is an analysis tool that brings information from various databases together into one source.";
+arrRowTitle[3] = "This is the repository for FAA official aircraft registration and airworthiness records (current and previous).";
+arrRowTitle[4] = "Here, you can access ACs, ADs, Orders, STCs, and TCDSs for performing Airworthiness Certification, and much more. ";
+//arrRowTitle[5] = "Used to look for physical evidence that the self-assessment is valid, true, or accurate.";
+ 
+var fdbkWrong1 = "One or more of your answers is incorrect.";
+var fdbkWrong2 = "The correct matches are identified.  ";
+var fdbkCorrect = "You have identified the correct electronic resource.   ";
+ 
+</script>
+
+<script type="text/javascript" src="../scripts/grid.js"></script>
+
+<!-- InstanceEndEditable -->
+<script language="javascript">
+  
+  function goNext() {
+	parent.gotoPage("f", nextURL);
+  }
+
+  function goBack() {
+	parent.gotoPage("b", prevURL);
+  }
+</script>
+
+</head>
+
+<body onload="javascript:initializePage()">
+
+<div id="lessonTitle"><script type="text/javascript">document.write(parent.modTitle);</script><span class="topicTitle"><!-- InstanceBeginEditable name="lesTitle" -->FAA Regulations, Publications, and Records<!-- InstanceEndEditable --> </span></div>
+
+<div id="pageNumber">Page <script type="text/javascript">document.write(curPgNum + " of " + parent.nPages);</script></div>
+
+<div id="fullHolder"><h1 class="pgTitle"><!-- InstanceBeginEditable name="pageTitle" -->Self-Check Question<!-- InstanceEndEditable --></h1>
+
+<div id="content">
+<!-- InstanceBeginEditable name="fullScree" -->
+<p>Match each FAA electronic resource with its description. </p>
+<form name="qForm">
+  <script language="javascript"> 
+          writeQuestion()
+          changeCursor('pointer');
+      </script>
+</form>
+
+
+
+<!-- InstanceEndEditable --> 
+</div> <!-- end of content -->
+
+</div>	<!-- end of fullHolder -->
+
+<!-- InstanceBeginEditable name="Prompt" -->
+<div id="prompt1">Correctly match the items. Then select DONE.</div>
+<!-- InstanceEndEditable -->
+
+<div id="next"><a href="javascript:goNext()" tabindex="50"><img id="next_" src="../sysimages/next_0.png" onmouseover="this.src='../sysimages/next_2.png' " onmouseout="this.src='../sysimages/next_0.png'" alt="Next" width="112" height="37" title="Next" /></a></div>
+
+<div id="back"><a href="javascript:goBack() " tabindex="51"><img src="../sysimages/back_0.png" alt="Back" name="back_" width="112" height="37" id="back_" title="Back" onmouseover="this.src='../sysimages/back_2.png'" onmouseout="this.src='../sysimages/back_0.png'" /></a></div>
+
+<div id="menu"><a href="javascript:parent.toModuleMenu()" tabindex="52"><img src="../sysimages/menu_0.png" alt="Menu" name="menu_" width="112" height="37" id="menu_" title="Menu" onmouseover="this.src='../sysimages/menu_2.png'" onmouseout="this.src='../sysimages/menu_0.png'" /></a></div>
+
+
+<!--********** Begin of Assets Panel **********-->
+<div id="options"> <a href="javascript: showMenu()" tabindex="53"><img src="../sysimages/options_0.png" width="111" height="41" alt="Options" onmouseover="this.src='../sysimages/options_2.png'" onmouseout="this.src='../sysimages/options_0.png'" title ="Options" /></a></div> 
+   
+<div id="menuContent">
+	
+  <div id="resources" ><a  href="javascript:openResources()" tabindex="54"><img id="resources_" src="../sysimages/menu_resources_0.png" onmouseover="this.src='../sysimages/menu_resources_2.png'" onmouseout="this.src='../sysimages/menu_resources_0.png'" alt="Resources" width="204" height="30" title="Resources" /></a></div>
+    
+    <div id="glossary" ><a href="javascript:openGlossary()" tabindex="55"><img id="resources_" src="../sysimages/menu_glossary_0.png" onmouseover="this.src='../sysimages/menu_glossary_2.png'" onmouseout="this.src='../sysimages/menu_glossary_0.png'" alt="Glossary" width="204" height="30" title="Glossary" /></a></div>       
+    
+    <div id="help" ><a href="javascript:openHelp()" tabindex="56"><img id="help_" src="../sysimages/menu_help_0.png" onmouseover="this.src='../sysimages/menu_help_2.png'" onmouseout="this.src='../sysimages/menu_help_0.png'" alt="Help" width="204" height="30" title="Help" /></a></div>
+    
+    <div id="close" class="menuItem"><a href="javascript:closeMenu()" tabindex="57"><img id="close_" src="../sysimages/menu_close_0.png" onmouseover="this.src='../sysimages/menu_close_2.png'" onmouseout="this.src='../sysimages/menu_close_0.png'" alt="Close" width="88" height="32" title="Close" /></a></div>
+
+</div>
+
+<div id="exit"><a href="javascript:exitConfirm()" tabindex="58"><img src="../sysimages/exit_0.jpg" alt="Exit" name="exit_" width="70" height="37" id="exit_" title="Exit" onmouseover="this.src='../sysimages/exit_2.jpg'" onmouseout="this.src='../sysimages/exit_0.jpg'" /></a>
+</div>
+
+<!-- Progress Bar -->
+<!-- End of Progress Bar -->
+
+<!-- InstanceBeginEditable name="D-Link" -->
+<!-- D-Link -->
+<div id="dlink"></div>
+<!-- InstanceEndEditable -->
+
+<div id="noneDisplay">
+  <!-- InstanceBeginEditable name="Audio and Anything Else" -->
+    
+  <!-- InstanceEndEditable -->
+</div>
+
+<div id="comment_link">
+    <div id="add_comment">
+    <a href="javascript:addComment()">Add Comment</a></div>
+    
+    <div id="view_comment">
+    <a href="javascript:viewComment()">View Comments</a></div>
+</div>
+
+<script language="javascript">
+	if (parent.reviewMode != true) {
+		document.getElementById("comment_link").style.visibility = "hidden";
+	}
+</script>
+
+</body>
+<!-- InstanceEnd --></html>

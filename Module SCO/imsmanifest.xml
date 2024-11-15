@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<manifest identifier="FEMA_REP" version="1.0"
+          xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2"
+          xmlns:imsmd = "http://www.imsglobal.org/xsd/imsmd_v1p2" 
+          xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd
+                              http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd
+                              http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">
+							  
+
+<metadata>
+   <schema>ADL SCORM</schema>
+   <schemaversion>1.2</schemaversion>
+   <imsmd:lom> 
+      <imsmd:general> 
+         <imsmd:title> 
+            <imsmd:langstring lang = "en_US">Name of the course (Module SCO)</imsmd:langstring> 
+         </imsmd:title> 
+         <imsmd:description> 
+            <imsmd:langstring Lang = "en_US">
+               Course Description
+            </imsmd:langstring> 
+          </imsmd:description> 
+          <imsmd:keywords> 
+            <imsmd:langstring Lang = "en_US">key word 1</imsmd:langstring>
+            <imsmd:langstring Lang = "en_US">key word 2</imsmd:langstring>
+			<imsmd:langstring Lang = "en_US">key word n</imsmd:langstring>
+          </imsmd:keywords> 
+      </imsmd:general> 
+   </imsmd:lom> 
+</metadata>
+
+<organizations default = "Module_SCO">
+  <organization identifier = "Module_SCO" structure="LINEAR">
+	 <title><![CDATA[Name of the ocurse]]></title>
+		<item identifier ="module00" identifierref ="SCO0" isvisible = "true">
+			<title><![CDATA[Module 0: Course Overview]]></title>
+	   </item>
+
+	   <item identifier ="module01" identifierref ="SCO1" isvisible = "true">
+			<title><![CDATA[Module 1: Name]]></title>
+	   </item>
+	
+	   <item identifier ="module02" identifierref ="SCO2" isvisible = "true">
+			<title><![CDATA[Module 2: Name]]></title>
+	   </item>
+	
+	   <item identifier ="module03" identifierref ="SCO3" isvisible = "true">
+			<title><![CDATA[Module 3: Name]]></title>
+	   </item>
+	
+	   <item identifier ="module04" identifierref ="SCO4" isvisible = "true">
+			<title><![CDATA[Module 4: Name]]></title>
+	   </item>-->
+	
+  </organization>
+</organizations>
+ 
+<resources>
+
+	<resource identifier ="SCO0" type = "webcontent" adlcp:scormtype ="sco" href="module0/launch_module0.htm">
+	  <file href = "module0/index_m00.htm"/>
+	  <file href = "module0/loadpage.htm"/>
+	  <file href = "module0/bottom_empty.htm"/>
+	  <file href = "module0/glossary.htm"/>
+	  <file href = "module0/00_010.htm"/>
+
+    </resource>
+	
+	<resource identifier ="SCO1" type = "webcontent" adlcp:scormtype ="sco" href="module1/launch_module1.htm">
+	  <file href = "module1/index_m01.htm"/>
+	  <file href = "module1/loadpage.htm"/>
+	  <file href = "module1/bottom_empty.htm"/>
+	  <file href = "module1/glossary.htm"/>
+	  <file href = "module1/lesson1/11_010.htm"/>
+	  <file href = "module1/lesson2/12_010.htm"/>
+    </resource>
+
+   <resource identifier ="SCO2" type = "webcontent" adlcp:scormtype ="sco" href="module2/launch_module2.htm">
+	  <file href = "module2/index_m02.htm"/>
+	  <file href = "module2/m02_menu.htm"/>
+	  <file href = "module2/loadpage.htm"/>
+	  <file href = "module2/bottom_empty.htm"/>
+	  <file href = "module2/glossary.htm"/>
+	  <file href = "module2/lesson1/21_010.htm"/>
+	  <file href = "module2/lesson2/22_010.htm"/>
+	  <file href = "module2/lesson3/23_010.htm"/>
+	  <file href = "module2/lesson4/24_010.htm"/>
+	  <file href = "module2/lesson5/25_010.htm"/>
+    </resource>
+	  
+    <resource identifier ="SCO3" type = "webcontent" adlcp:scormtype ="sco" href="module3/launch_module3.htm">
+	  <file href = "module3/index_m03.htm"/>
+	  <file href = "module3/m03_menu.htm"/>
+	  <file href = "module3/loadpage.htm"/>
+	  <file href = "module3/bottom_empty.htm"/>
+	  <file href = "module3/glossary.htm"/>
+	  <file href = "module3/lesson1/31_010.htm"/>
+	  <file href = "module3/lesson2/32_010.htm"/>
+	  <file href = "module3/lesson3/33_010.htm"/>
+    </resource>
+
+    <resource identifier ="SCO4" type = "webcontent" adlcp:scormtype ="sco" href="module4/launch_module4.htm">
+	  <file href = "module4/index_m04.htm"/>
+	  <file href = "module4/m04_menu.htm"/>
+	  <file href = "module4/loadpage.htm"/>
+	  <file href = "module4/bottom_empty.htm"/>
+	  <file href = "module4/glossary.htm"/>
+	  <file href = "module4/lesson1/41_010.htm"/>
+	  <file href = "module4/lesson2/42_010.htm"/>
+	  <file href = "module4/lesson3/43_010.htm"/>
+    </resource>
+
+
+</resources>
+
+</manifest>
+

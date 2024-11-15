@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<title>Popup Information</title>
+<link href="../../styles/popup.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" type="text/JavaScript" src="../../scripts/c2_content.js"></script>
+ 
+<script language="JavaScript"> 
+ 
+var iTerm = getQueryValue('popterm')
+var arrPopup = new Array();
+var nTerm = 5;
+for (var i=0; i<nTerm; i++) {
+	arrPopup[i] = new Array(2);
+}
+arrPopup[0][0] = "<h1 class='popupH'>Part 125 Oceanic Operations</h1>";
+arrPopup[0][1] = "<p>Part 125 discusses navigation requirements for oceanic operations including:</p><ul><li>Communication and navigation equipment</li><li>Communication and navigation equipment for IFR or extended over-water operations</li><li>Use of Single Independent Navigation Systems</li></ul>";
+
+arrPopup[1][0] = "<h1 class='popupH'>14 CFR &sect;125.203 Communication and Navigation Equipment</h1>";
+arrPopup[1][1] = "<p>According to 14 CFR &sect;125.203, no person may operate an airplane unless it has <strong>two</strong>-way radio communication equipment able, at least in flight, to transmit to, and receive from, appropriate facilities 22 nautical miles away.</p><p>In addition, the requirement states that no person may operate an airplane over the top unless it has navigation equipment suitable for the route to be flown.</p>"
+
+arrPopup[2][0] = "<h1 class='popupH'>Communication and Navigation Equipment for IFR or Extended Over-Water Operations</h1>";
+arrPopup[2][1] = "<p>Except for the examples provided, according to 14 CFR &sect;125.203, no person may operate an airplane carrying passengers under IFR or in extended over-water operations unless the en route navigation aids necessary for navigating the airplane along the route are available and suitable for use by the aircraft navigation systems. </p><p>In addition, the airplane used in those operations must be equipped with, except as provided, <strong>two</strong> approved independent navigation systems suitable for navigating the airplane along the route within the degree of accuracy required for ATC, and at least the following equipment:</p><ul><li>One marker beacon receiver providing visual and aural signals</li><li>One ILS receiver</li><li>Two transmitters</li><li>Two microphones</li><li>Two headsets or one headset and one speaker</li></ul><p>Two independent communication systems, one of which must have two-way voice communication capability, capable of transmitting to, and receiving from, at least one appropriate facility from any place on the route to be flown.</p>"
+
+arrPopup[3][0] = "<h1 class='popupH'>Use of a Single Independent Navigation System for Operations under IFR</h1>";
+arrPopup[3][1] = "<p>Notwithstanding the already mentioned requirement, according to 14 CFR &sect;125.203, the airplane may be equipped with a single independent navigation system suitable for navigating the airplane along the route to be flown within the degree of accuracy required for ATC if:</p><ul><li>It can be shown that the airplane is equipped with at least one other independent navigation system suitable, in the event of loss of the navigation capability of the single independent navigation system at any point along the route, for proceeding safely to a suitable airport and completing an instrument approach</li><li>The airplane has sufficient fuel so the flight may proceed safely to an airport by use of the remaining navigation system, complete an instrument approach and land</li></ul>"
+
+arrPopup[4][0] = "<h1 class='popupH'>Extended Over-water Operations</h1>";
+arrPopup[4][1] = "<p>Under 14 CFR &sect;125.203, installation and use of a single long-range navigation system and a single long-range communication system for extended overwater operations in certain geographic areas may be authorized. The following are among the operational factors the Administrator may consider in granting an authorization:</p><ul><li>The ability of the flight crew to navigate the airplane along the route within the degree of accuracy required for ATC</li><li>The length of the route</li><li>The duration of the very high frequency communications gap</li></ul>" 
+
+</script>
+</head>
+ 
+<body>
+<div id="popBar" style="background:url(../sysimages/pop_up1_big.jpg)">
+<div id="popTitle" style="top:20px"></div></div>
+ 
+<div id="popText" style="top:72px"></div>
+ 
+<div id="popClose">
+<a href="javascript:window.close();">Close this window</a>
+</div>
+ 
+<script language="javascript" type="text/javascript" > 
+	document.getElementById('popTitle').innerHTML = arrPopup[iTerm-1][0];
+	document.getElementById('popText').innerHTML = arrPopup[iTerm-1][1];
+</script>
+  
+</body>
+
+</html>

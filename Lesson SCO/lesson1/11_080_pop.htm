@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<title>Popup Information</title>
+<link href="../styles/popup.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" type="text/JavaScript" src="../scripts/c2_content.js"></script>
+ 
+<script language="JavaScript"> 
+ 
+var iTerm = getQueryValue('popterm')
+var arrPopup = new Array();
+var nTerm = 4;
+for (var i=0; i<nTerm; i++) {
+	arrPopup[i] = new Array(2);
+}
+arrPopup[0][0] = "<h1 class='popupH'>Title 49 USC, Section 44701</h1>";
+arrPopup[0][1] = "<p>Title 49 USC, Section 44701 states that the FAA Administrator shall promote safe flight of civil aircraft in air commerce by prescribing minimum standards for design, material, and performance of aircraft, aircraft engines, propellers, and appliances.</p><p>Notice that we only regulate to minimum standards. You can certainly exceed the minimum standards; however, the minimum standards must always be met. </p>";
+ 
+arrPopup[1][0] = "<h1 class='popupH'>Title 49 USC, Section 44702(a)</h1>";
+arrPopup[1][1] = "<p>Title 49 USC, Section 44702(a) gives the administrator the authority to issue Airman Certificates, Type Certificates, Production Certificates, Airworthiness Certificates, Air Carrier Operating Certificates, Airport Operating Certificates, Air Agency Certificates, and Air Navigation Facility Certificates. </p>";
+
+
+arrPopup[2][0] = "<h1 class='popupH'>Title 49 USC, Section 44702(d)</h1>";
+arrPopup[2][1] = "<p>According to Title 49 USC Section 44702(d), the administrator may delegate to a qualified private person (designee) a matter related to the examination, testing, and inspection necessary to issue a certificate and the authority to issue that certificate. </p>";
+ 
+</script>
+</head>
+ 
+<body>
+<div id="popBar">
+<div id="popTitle"></div></div>
+ 
+<div id="popText"></div>
+ 
+<div id="popClose">
+<a href="javascript:window.close();">Close this window</a>
+</div>
+ 
+<script language="javascript" type="text/javascript" > 
+	document.getElementById('popTitle').innerHTML = arrPopup[iTerm-1][0];
+	document.getElementById('popText').innerHTML = arrPopup[iTerm-1][1];
+</script>
+  
+</body>
+
+</html>

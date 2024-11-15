@@ -1,0 +1,48 @@
+The SCORM1.2 folder has three templates: Course SCO, Module SCO, and Lesson SCO.
+
+Course SCO
+
+This template is actually a single module SCO (the course has only one module). The course has multiple lessons. 
+The LMS will mark "completed" when all lessons are completed. "Force progression" is set to the lesson pages -- a user has to
+finish all the interactions on the page before Next is activated. The course menu is not "force progression" -- a user
+could select any lesson to start. Tracking/bookmark feature is set to course menu and each page.
+
+The manifest file (imsmanifest.xml) packs all lessons and common assets together as a single course SCO package. 
+
+
+
+Module SCO
+
+The module SCO template is for multiple modules. Each module is a single SCO and has the same features as the Course SCO template. 
+LMS would mark "completed" when one of the module is completed. There is no course completion. All modules share the following
+common assets:
+
+template (folder)
+sysimages (folder)
+styles (folder)
+scripts (folder)
+bottom_empty.htm
+loadpage.htm
+resources.htm
+help.htm
+glossary.htm
+
+The manifest file (imsmanifest.xml) packs all modules and common assets together, making it "multiple-module" Module SCO package. 
+
+
+Lesson SCO
+
+The lesson SCO template is for multiple lessons. Each lesson is a single SCO. LMS marks "completed" when each lesson is 
+completed. It also has bookmark feature for each page in the lesson. All the lessons share the following common assets:
+
+template (folder)
+sysimages (folder)
+styles (folder)
+scripts (folder)
+bottom_empty.htm
+loadpage.htm
+resources.htm
+help.htm
+glossary.htm
+
+The manifest file (imsmanifest.xml) packs all lessons and common assets together, making it "multiple-lesson" Lesson SCO package. 

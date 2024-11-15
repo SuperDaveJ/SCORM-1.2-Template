@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<title>Popup Information</title>
+<link href="../../styles/popup.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" type="text/JavaScript" src="../../scripts/c2_content.js"></script>
+ 
+<script language="JavaScript"> 
+ 
+var iTerm = getQueryValue('popterm')
+var arrPopup = new Array();
+var nTerm = 4;
+for (var i=0; i<nTerm; i++) {
+	arrPopup[i] = new Array(2);
+}
+arrPopup[0][0] = "<h1 class='popupH'>14 CFR, Part 43: Maintenance, Rebuilding, and Alteration</h1>";
+arrPopup[0][1] = "<p>14 CFR, Part 43: Maintenance, Rebuilding, and Alteration prescribes the rules governing the maintenance, preventive maintenance, rebuilding, and alteration for aircraft holding a U.S. Airworthiness Certificate (with some exceptions). Part 43 identifies persons authorized to perform maintenance activities. </p>";
+ 
+arrPopup[1][0] = "<h1 class='popupH'>14 CFR, Part 45: Identification and Registration Marking</h1>";
+arrPopup[1][1] = "<p>14 CFR, Part 45: Identification and Registration Marking contains the identification and national registration marking requirements for type certificated aircraft, aircraft engines, and propellers. Yes, aircraft have identification requirements other than the nationality marks. Aircraft and aircraft engines also must have a fireproof data plate that identifies the builder&#8217;s name, model designation, serial number, Type Certificate number, and Production Certificate number, if applicable. Propellers do not have to have a data plate, but do have to have the required markings. </p>";
+
+arrPopup[2][0] = "<h1 class='popupH'>14 CFR, Part 47: Aircraft Registration</h1>";
+arrPopup[2][1] = "<p>14 CFR, Part 47: Aircraft Registration requires a U.S. owned aircraft to be registered by the FAA Aircraft Registry to its legal owner BEFORE it can be certificated or operated. </p>";
+
+arrPopup[3][0] = "<h1 class='popupH'>14 CFR, Part 91: General Operating and Flight Rules</h1>";
+arrPopup[3][1] = "<p>14 CFR, Part 91: General Operating and Flight Rules, prescribes the rules governing the operation of aircraft. Also included are the requirements for the owner/operator of an aircraft to maintain that aircraft in an airworthy condition. This includes inspections and maintenance of the aircraft and associated equipment as well as maintenance record keeping requirements.    </p>";
+ 
+</script>
+</head>
+ 
+<body>
+<div id="popBar">
+<div id="popTitle"></div></div>
+ 
+<div id="popText"></div>
+ 
+<div id="popClose">
+<a href="javascript:window.close();">Close this window</a>
+</div>
+ 
+<script language="javascript" type="text/javascript" > 
+	document.getElementById('popTitle').innerHTML = arrPopup[iTerm-1][0];
+	document.getElementById('popText').innerHTML = arrPopup[iTerm-1][1];
+</script>
+  
+</body>
+
+</html>
